@@ -54,6 +54,29 @@ HUD: goals out of 5 (e.g. "3/5") with 5 dots for the kicks (scored / missed / pe
 The old mockup's "VOCÊ 2 × 1 CPU" score and "Arraste para mirar · segure para dar força" hint are dropped:
 the CPU does not kick, and the control is a single swipe, not aim + hold.
 
+## First prototype as built
+
+Implemented 2026-10-19 (version 0.2.0). Tuning numbers live in `src/config/tuning.ts`; these are the
+starting values to adjust after playtesting on a phone, not confirmed decisions.
+
+- **Swipe mapping**: the swipe's chord aims (scaled down by `aimGain` so finger drift does not spray
+  shots), its length in viewport heights sets speed, and the sideways bulge of the gesture sets spin.
+  The launch angle stays nearly constant, so power alone decides the arc: too soft hits the wall, too
+  hard clears the bar, and the right power changes with the distance.
+- **Curl**: spin bends the ball sideways. The launch direction pre-compensates the expected curl, so
+  the ball bows out like the gesture and comes back near where the swipe pointed.
+- **Dip**: an extra downward pull stands in for topspin. Without it no shot fast enough to beat the
+  keeper can rise over the wall and drop under the bar.
+- **Keeper**: predicts where the ball crosses its line, guesses the wrong side 25% of the time, waits
+  0.45 s, then moves at 3.5 m/s with 0.75 m of reach. Corners beat it; shots near it are saved.
+- **Free kicks**: 18 to 27 m out, up to 10 m to either side, always outside the box. The wall has 4
+  players (3 beyond 23 m), stands 9.15 m from the ball and covers the near-post side.
+- **Sound**: synthesized with WebAudio (kick thump, net swish, crowd bed with cheer and groan), so
+  there are no audio files to download.
+- **End of round**: a "Fim da rodada" card with the score and a "Jogar de novo" button, the minimum
+  needed to see whether people want another round. Portrait phones get a "Gire o celular" notice.
+- Three.js r186 removed `PCFSoftShadowMap`; the scene uses `PCFShadowMap` with the same shadow radius.
+
 ## Future ideas (not in the prototype)
 
 - **Penalty mode**: penalty kicks as a separate game mode, not as a tiebreak for free kicks.

@@ -28,6 +28,8 @@ export const ball = {
 
 // Swipe lengths are measured in viewport heights so the same gesture feels the same on any screen.
 export const swipe = {
+  // A drag must start this close to the ball on screen. Generous: a fingertip covers the ball.
+  grabRadius: 0.2,
   minLength: 0.06,
   fullPowerLength: 0.55,
   minSpeed: 14,
@@ -78,6 +80,9 @@ export const freeKick = {
   nearWallPlayers: 4,
   farWallPlayers: 3,
 } as const;
+
+// Frames longer than this (a background tab, a hitch) are cut short instead of fast-forwarded.
+export const maxFrameTime = 0.25;
 
 export const shot = {
   // A shot still unresolved after this many seconds is a miss.
