@@ -7,12 +7,12 @@ Context carried over from the brainstorming session where this game was chosen. 
 Diogo wanted new browser games inspired by classic PS1 / Master System / Phantom System / Mega Drive /
 SNES hits. Four ideas were mocked up:
 
-| Game | Inspired by | One line |
-|---|---|---|
-| Moleque Jokenpô | Alex Kidd (Master System) | Side-scroller, punch blocks, bosses beaten at rock-paper-scissors |
-| **Cobrança!** | Penalty / free-kick games | Camera behind the ball: aim, power and curl past the wall |
-| Fuga do Forte | Prince of Persia | Precision jumps, collapsing floors, sword duels against the clock |
-| Corre, Capivara! | Crash Bandicoot (PS1) | Into-the-screen runner, crates, mangoes, spin attack |
+| Game             | Inspired by               | One line                                                          |
+| ---------------- | ------------------------- | ----------------------------------------------------------------- |
+| Moleque Jokenpô  | Alex Kidd (Master System) | Side-scroller, punch blocks, bosses beaten at rock-paper-scissors |
+| **Cobrança!**    | Penalty / free-kick games | Camera behind the ball: aim, power and curl past the wall         |
+| Fuga do Forte    | Prince of Persia          | Precision jumps, collapsing floors, sword duels against the clock |
+| Corre, Capivara! | Crash Bandicoot (PS1)     | Into-the-screen runner, crates, mangoes, spin attack              |
 
 **Cobrança! is the first one to be built**, in this repository. The other three stay as ideas.
 
@@ -60,10 +60,7 @@ the CPU does not kick, and the control is a single swipe, not aim + hold.
 - Defending (alternating with the CPU like a real shootout).
 - Levels, difficulty curve, retention (Diogo explicitly deferred these).
 
-## Suggested skills for the next session
+## Skills
 
-From github.com/obra/superpowers: `brainstorming` (settle the open questions first), `writing-plans`,
-`test-driven-development` (ball physics and keeper logic are pure functions worth testing),
-`verification-before-completion`.
-From github.com/openai/plugins (game-studio): `three-webgl-game`, `game-ui-frontend`, `game-playtest`,
-`web-3d-asset-pipeline` (when real models replace the procedural ones).
+The skills suggested here at handoff are now installed in `.agents/skills/`; `.agents/rules/workflow.md`
+maps each situation to its skill. `web-3d-asset-pipeline` waits until real models replace the procedural ones.
