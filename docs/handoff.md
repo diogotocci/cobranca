@@ -35,26 +35,30 @@ rebuilt in real Three.js in three styles: Brinquedo (toy), Cel-shading, Diorama.
   - Style comparison: https://claude.ai/artifact/4HGTgQv7FaCzvkzbvEqrwe
   - First flat mockups (rejected look, HUD layout still useful): https://claude.ai/artifact/X71ytBVr41rUQawkMzMHsT
 
-## Gameplay proposal for the first playable prototype
+## Gameplay for the first playable prototype
 
-Proposed, not yet confirmed by Diogo:
+Confirmed by Diogo on 2026-10-19:
 
+- **Player only kicks.** No defending in the prototype; defending may come later.
+- **Free kicks**: ball position and wall change every attempt.
 - **Kick by swipe**: drag from the ball. Direction = aim, length = power, a curve in the gesture = spin
   (ball bends around the wall).
-- **Free kicks**: ball position and wall change every attempt.
 - **CPU keeper**: reacts to the shot with a delay and sometimes guesses wrong. That delay is the
   difficulty knob later.
-- **Short round**: 5 kicks with a score, to test whether people want to play again.
-- Out of scope for now: levels, progression, sound, menus. First prove the kick feels good.
+- **Short round**: 5 kicks, scored as goals out of 5, to test whether people want to play again.
+- **Sound is in scope**: kick, net, crowd.
+- Out of scope for now: levels, progression, difficulty curve, retention, menus.
 
-HUD from the earlier mockup: score "VOCÊ 2 × 1 CPU" with 5 dots for the kicks (scored / missed /
-pending), distance label ("FALTA · 22 m"), and the hint "Arraste para mirar · segure para dar força".
+HUD: goals out of 5 (e.g. "3/5") with 5 dots for the kicks (scored / missed / pending), distance label
+("FALTA · 22 m"), and a hint matching the swipe control, e.g. "Arraste a partir da bola para chutar".
+The old mockup's "VOCÊ 2 × 1 CPU" score and "Arraste para mirar · segure para dar força" hint are dropped:
+the CPU does not kick, and the control is a single swipe, not aim + hold.
 
-## Open questions
+## Future ideas (not in the prototype)
 
-1. Does the player only kick, or also defend (alternating with the CPU like a real shootout)?
-   This changes the core loop and was the last question asked.
-2. Later: levels, difficulty curve, retention (Diogo explicitly deferred these).
+- **Penalty mode**: penalty kicks as a separate game mode, not as a tiebreak for free kicks.
+- Defending (alternating with the CPU like a real shootout).
+- Levels, difficulty curve, retention (Diogo explicitly deferred these).
 
 ## Suggested skills for the next session
 
