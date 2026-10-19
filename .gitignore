@@ -1,0 +1,15 @@
+node_modules/
+dist/
+coverage/
+playwright-report/
+test-results/
+.eslintcache
+*.tsbuildinfo
+.env
+.env.*
+
+# Knowledge graph, rebuilt locally with `graphify update .` (see .agents/rules/graphify.md).
+graphify-out/
+
+# Scratch space for one-off scripts and notes.
+scratch/

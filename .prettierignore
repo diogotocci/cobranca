@@ -1,0 +1,10 @@
+pnpm-lock.yaml
+skills-lock.json
+.agents/skills/
+.agents/references/
+.agents/workflows/
+.claude/
+graphify-out/
+docs/reference/
+coverage/
+dist/
