@@ -22,6 +22,7 @@ Only task-related changes. Test-first (`coding-standards.md`). Run `pnpm check` 
 - Conventional Commits in English: `feat: add swipe-to-kick input`, `fix: clamp shot power`, `chore: set up lint and tests`.
 - Review `git status` and `git diff` first, stage files explicitly, then review `git diff --cached`. Use `git add -A` only after every changed file was reviewed.
 - No AI attribution of any kind (`coding-standards.md`): strip any `Co-Authored-By` or session trailer a tool adds.
+- Author and committer are the owner: `Diogo Tocci <2313839+diogotocci@users.noreply.github.com>`. Cloud sessions set it at start (`.agents/hooks/session-start.sh`); before the first commit, check `git config user.name` and `git log -1 --format='%an <%ae> / %cn <%ce>'` and fix the identity if it is anything else.
 
 ## Pull request
 
