@@ -1,0 +1,9 @@
+# Vendored third-party skills and references: not this project's code.
+.agents/skills/
+.agents/references/
+.agents/workflows/
+.claude/
+# Lockfiles and the standalone brainstorming prototype.
+pnpm-lock.yaml
+skills-lock.json
+docs/reference/
